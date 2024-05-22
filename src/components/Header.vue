@@ -1,29 +1,12 @@
-<script setup>
-defineProps({
-  msg: {
-    type: String,
-    required: true
-  }
-})
-</script>
-
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.webp" width="136" height="50" />
+    <img alt="Lance Computer LLC logo" class="logo" src="@/assets/logo.webp"/>
     <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
 
   </header>
-  <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>
-      You’ve successfully created a project with
-      <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
-    </h3>
-  </div>
 </template>
 
 <style scoped>
@@ -32,16 +15,40 @@ header {
   z-index: 1;
   top: 0;
   left: 0;
-  width: auto;
-  display: flex;
-  margin: 0 5%;
-  background-color: black;
+  right: 0;
+  background-color: #121212;
+  border-bottom: 1px solid #002263;
 }
+  .logo {
+    float: left;
+    margin-left: 5%;
+    height: 6vh;
+  }
   nav {
+    height: 6vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    align-self: center;
+    float: right;
+    margin-right: 5%;
+    color: white;
+  }
+  nav a.router-link-exact-active {
+  color: var(--color-text);
+  }
+
+  nav a.router-link-exact-active:hover {
+    background-color: transparent;
+  }
+
+  nav a {
+    display: inline-block;
+    padding: 0 1rem;
+    border-left: 1px solid var(--color-border);
+  }
+
+  nav a:first-of-type {
+    border: 0;
   }
 h1 {
   font-weight: 500;
