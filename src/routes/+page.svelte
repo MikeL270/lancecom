@@ -1,15 +1,15 @@
 
 <script lang="ts">
-    import me from '$lib/assets/me.webp'
+    import me from '$lib/assets/me.webp';
     import type { PageProps } from './$types';
 
     let { data }: PageProps = $props();
 </script>
-<header class="center-align">
-    <h1>About Me</h1>
+<header>
+    <h2>About Me</h2>
 </header>	
-<article class="no-padding round surface-container-lowest center-align">
-    <img class="responsive" src="{me}" alt="Me with a node from ARCC's beartooth cluster">
+<article class="no-padding round surface-container-lowest center-align border">
+    <img class="responsive top-round" src="{me}" alt="Me with a node from ARCC's beartooth cluster">
     <div class="padding">
         <h2>Michael B. Lance</h2>
         <p> 
@@ -20,46 +20,4 @@
             there just hasn't been a good picture taken of me in over a year.
         </p>
     </div>
-</article>
-<article class="round surface-container-lowest center-align">
-    <h5>Education</h5>
-        <table>
-            <thead class="center-align">
-                <tr>
-                    <th>Year Range</th>
-                    <th>Institution</th>
-                    <th>Degree</th>
-                </tr>
-            </thead>
-            <tbody class="center-align">
-                {#each data.eductation as edu}
-                <tr>
-                    <td>{edu.years}</td>
-                    <td>{edu.institution}</td>
-                    <td>{edu.degree}</td>
-                </tr>
-                {/each}
-            </tbody>
-        </table>
-</article>
-<article class="round surface-container-lowest center-align">
-    <h5>Certification</h5>
-        <table>
-            <thead class="center-align">
-                <tr>
-                    <th>Issued - Expires</th>
-                    <th>Issuer</th>
-                    <th>Certification</th>
-                </tr>
-            </thead>
-            <tbody class="center-align">
-                {#each data.certification as cert}
-                <tr>
-                    <td>{cert.years}</td>
-                    <td>{cert.issuer}</td>
-                    <td>{cert.certification}</td>
-                </tr>
-                {/each}
-            </tbody>
-        </table>
 </article>
