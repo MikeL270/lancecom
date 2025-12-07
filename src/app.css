@@ -50,15 +50,7 @@ main {
     flex-grow: 1;
 }
 
-a:hover {
-    border: 1px solid var(--primary);
-    color: var(--inverse-surface);
-}
-a:active {
-    border-radius: 8px;
-}
-
-@media (max-width: 900px) {
+@media (max-width: 1s00px) {
 		h2 {
 			font-size: x-large;
 		}

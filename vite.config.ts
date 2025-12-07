@@ -1,9 +1,14 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
+import path from 'path';
 
 export default defineConfig({
 	plugins: [sveltekit()],
-	ssr: {
-		external: ['beercss', 'material-dynamic-colors']
-	}
+	server: {
+		fs: {
+			allow: [
+				path.resolve(__dirname, 'images')
+			]
+		}
+	},
 });

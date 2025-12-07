@@ -1,8 +1,13 @@
-<header class="center-align">
-    <h1>Portfolio</h1>
-</header>	
-<article class="surface-container-lowest">
-    <div class="row">
+<script lang="ts">
+    import type { PageProps } from './$types';
+    import ProjectCard from '../../components/ProjectCard.svelte';
 
-    </div>
-</article>
+    let { data }: PageProps = $props();
+
+</script>
+<h2 class="small-padding round center-align bottom-shadow border">Project Portfolio</h2>
+<div class="grid">
+    {#each data.projects as project}
+        <ProjectCard {project}/>
+    {/each}
+</div>

@@ -19,6 +19,15 @@ export type certificationEntry = {
     position: string;
 };
 
+export type projectEntry = {
+    name: string;
+    started: Date;
+    completed: Date | string;
+    image: string;
+    brief: string;
+    description:string;
+}
+
 export type Entry = certificationEntry | educationEntry | workHistoryEntry;
 
 export default 0;
