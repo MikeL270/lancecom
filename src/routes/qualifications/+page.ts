@@ -1,5 +1,5 @@
 import type { PageLoad } from './$types';
-import type { educationEntry } from '../../modules/types';
+import type { educationEntry } from '../../ts/types';
 
 export const load: PageLoad = ({ params }) => {
     return {

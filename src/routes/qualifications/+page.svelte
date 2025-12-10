@@ -5,7 +5,7 @@
         filterByStartDateDesc, 
         filterByEndDateAsc, 
         filterByEndDateDesc 
-    } from '../../modules/tableFilters';
+    } from '../../ts/filters';
     import Icon from '@iconify/svelte';
 
     // ------------------------------------------------------------------------------------------ //
@@ -54,9 +54,8 @@
         educationFilterIdx = (educationFilterIdx === 2) ? 3 : 2;
     };
 </script>
-<h2>Work History</h2>
-<article class="surface-container-lowest center-align border">
-        <h5 class="underline">Employment History</h5>
+<h2 class="small-padding center-align bottom-shadow responsive border">Work History</h2>
+<article class="surface-container-lowest center-align responsive border">
     <div class="medium-height scroll">
         <table class="center-align border stripes surface-container">
             <thead class="surface-container-lowest square fixed">
@@ -107,9 +106,8 @@
             </tbody>
         </table>
     </div>
-</article>
-<article class="surface-container-lowest center-align border">
-    <h5 class="underline">Education</h5>
+</article><h2 class="small-padding round center-align bottom-shadow responsive border">Education</h2>
+<article class="surface-container-lowest center-align responsive border">
         <div class="medium-height scroll">
             <table class="center-align border stripes surface-container">
             <thead class="surface-container-lowest square fixed">
@@ -148,10 +146,10 @@
         </table>
         </div>
 </article>
-<article class="surface-container-lowest center-align border">
-    <h5 class="underline">Certification</h5>
+<h2 class="small-padding round center-align bottom-shadow responsive border"> Certification</h2>
+<article class="surface-container-lowest center-align responsive border">
     <div class="medium-height scroll">
-        <table class="center-align borde3r stripes surface-container">
+        <table class="center-align border stripes surface-container">
             <thead class="surface-container-lowest square fixed">
                 <tr>
                     <th>Issued</th>

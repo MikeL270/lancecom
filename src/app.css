@@ -1,5 +1,5 @@
 @import "beercss/dist/cdn/beer.min.css";
-
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 :root {
     --primary:#9ecaff;
     --on-primary:#003258;
@@ -38,20 +38,44 @@
     --surface-container-high:#282a2d;
     --surface-container-highest:#333538;
 }
-
-.appWrapper {
-    display: contents;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-} 
-
-main {
-    flex-grow: 1;
+* {
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
-@media (max-width: 1s00px) {
-		h2 {
-			font-size: x-large;
-		}
-	}
+
+svg {
+    display: flex;
+}
+
+span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+h2 {
+    border-radius: 16px;
+}
+
+.page {
+    height: 100%
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 869px) {
+    h5 {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 872px) {
+    h1 {
+        font-size: 24px;
+    }
+}
+

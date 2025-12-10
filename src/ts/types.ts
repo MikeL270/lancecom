@@ -21,13 +21,14 @@ export type certificationEntry = {
 
 export type projectEntry = {
     name: string;
-    started: Date;
-    completed: Date | string;
+    slug: string;
+    startDate: Date;
+    endDate: Date | string;
     image: string;
     brief: string;
     description:string;
 }
 
-export type Entry = certificationEntry | educationEntry | workHistoryEntry;
+export type Entry = certificationEntry | educationEntry | workHistoryEntry | projectEntry;
 
 export default 0;
