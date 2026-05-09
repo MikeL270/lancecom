@@ -33,7 +33,7 @@
         <p>
           I am a student of Applied Software Development at the University of
           Wyoming where I work as an undergraduate research assistant in the
-          Koger developing software for academic uses. I am really good at
+          Koger Lab developing software for academic uses. I am really good at
           meeting the requirements of assignments but I cant quite capture their
           spirit.
         </p>
