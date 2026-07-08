@@ -54,8 +54,8 @@
     <h1 class="nosifier-regular">Michael B. Lance</h1>
   {/if}
   {#if desktopNav.current}
-    <div class="absolute right right-margin padding">
-      <nav class="tabbed background middle-align">
+    <div class="absolute right padding">
+      <nav class="tabbed background middle-align no-round">
         {#each routes as route}
           <a
             href={route.location}
@@ -83,12 +83,12 @@
     </nav>
   {/if}
 </header>
-<main class="responsive" class:middle-align={desktopNav.current}>
+<main
+  class="responsive container scroll"
+  class:middle-align={desktopNav.current}
+>
   {#key $page.url.pathname}
-    <div
-      class="page bottom vertical center-align active"
-      class:scroll={!desktopNav.current}
-    >
+    <div class="vertical center-align active">
       {@render children()}
     </div>
   {/key}
