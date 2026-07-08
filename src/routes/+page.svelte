@@ -12,16 +12,14 @@
 </script>
 
 <div
-  class="large-height middle-align"
+  class="middle-align max height"
   class:grid={twoCol.current}
   class:vertical={!twoCol.current}
 >
   <div class="s6">
-    <article
-      class="no-padding top-round medium-elevate center-align large-height clip responsive"
-    >
+    <article class="no-padding medium-elevate center-align clip responsive">
       <img
-        class="responsive medium-height top-round"
+        class="responsive medium-height"
         src="/images/me.webp"
         alt="Me with a node from UWYO ARCC's beartooth cluster."
       />
@@ -39,9 +37,7 @@
     </article>
   </div>
   <div class="s6">
-    <article
-      class="no-padding rounded medium-elevate center-align large-height clip"
-    >
+    <article class="no-padding rounded medium-elevate center-align clip">
       <div class="padding large-height scroll">
         <h3>Project Showcase</h3>
         <p>

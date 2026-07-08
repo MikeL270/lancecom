@@ -34,6 +34,24 @@
   ];
 
   let date = $state(new Date().getFullYear());
+
+  let isDark = $state(true);
+
+  $effect(() => {
+    isDark = document.body.classList.contains("dark");
+  });
+
+  const toggleTheme = () => {
+    isDark = !isDark;
+
+    if (isDark) {
+      document.body.classList.add("dark");
+      document.body.classList.remove("light");
+    } else {
+      document.body.classList.add("light");
+      document.body.classList.remove("dark");
+    }
+  };
 </script>
 
 <svelte:head>
@@ -84,17 +102,17 @@
   {/if}
 </header>
 <main
-  class="responsive container scroll"
+  class="responsive scroll max large-margin"
   class:middle-align={desktopNav.current}
 >
   {#key $page.url.pathname}
-    <div class="vertical center-align active">
+    <div class="vertical center-align active page bottom">
       {@render children()}
     </div>
   {/key}
 </main>
-<footer class="row center-align">
-  <span>© {date} All rights reserved</span>
+<footer class="row center-align fixed">
+  <span>&copy; {date} Michael Lance All rights reserved</span>
   <a
     target="_blank"
     rel="noopener noreferrer"
@@ -110,3 +128,14 @@
     <Icon icon="logos:signal" width="1.5rem" />
   </a>
 </footer>
+<button
+  class="circle extra primary elevation"
+  style="position: fixed; bottom: 2rem; right: 2rem; z-index: 99999;"
+  onclick={toggleTheme}
+>
+  {#if isDark}
+    <Icon icon="material-symbols:light-mode-rounded" width="0.5rem" />
+  {:else}
+    <Icon icon="material-symbols:dark-mode-rounded" width="0.5rem" />
+  {/if}
+</button>
