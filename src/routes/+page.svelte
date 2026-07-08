@@ -11,9 +11,6 @@
   );
 </script>
 
-<h2 class="small-padding center-align bottom-shadow border responsive">
-  About Me
-</h2>
 <div
   class="large-height middle-align"
   class:grid={twoCol.current}
@@ -21,29 +18,32 @@
 >
   <div class="s6">
     <article
-      class="no-padding bottom-shadow center-align border large-height scroll"
+      class="no-padding top-round medium-elevate center-align large-height clip"
     >
       <img
-        class="responsive medium-height"
+        class="responsive medium-height top-round"
         src="/images/me.webp"
         alt="Me with a node from UWYO ARCC's beartooth cluster."
       />
       <div class="padding">
-        <h3>Michael B. Lance</h3>
+        <h3>Biography</h3>
         <p>
-          I am a student of Applied Software Development at the University of
-          Wyoming where I work as an undergraduate research assistant in the
-          Koger Lab developing software for academic uses. I am really good at
-          meeting the requirements of assignments but I cant quite capture their
-          spirit.
+          First student in the UWYO School of Computing's Applied Software
+          Development program. Currently working as a Computation Research Aide
+          Senior at Argonne National Laboratory in the Performance and
+          Engineering Group of the Argonne Leadership Comupting Facility for the
+          summer of 2026. Interested in High Performance computing and producing
+          high quality and easy to use scientific software.
         </p>
       </div>
     </article>
   </div>
   <div class="s6">
-    <article class="no-padding bottom-shadow center-align border large-height">
+    <article
+      class="no-padding rounded medium-elevate center-align large-height clip"
+    >
       <div class="padding large-height scroll">
-        <h3>Recent Projects</h3>
+        <h3>Project Showcase</h3>
         <p>
           I have worked on a fairly wide range of projects both professionally
           and personally. Under my own free will, and not because its required
