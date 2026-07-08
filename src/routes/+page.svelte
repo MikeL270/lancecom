@@ -18,7 +18,7 @@
 >
   <div class="s6">
     <article
-      class="no-padding top-round medium-elevate center-align large-height clip"
+      class="no-padding top-round medium-elevate center-align large-height clip responsive"
     >
       <img
         class="responsive medium-height top-round"
