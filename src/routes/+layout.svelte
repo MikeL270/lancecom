@@ -106,7 +106,7 @@
   class:middle-align={desktopNav.current}
 >
   {#key $page.url.pathname}
-    <div class="vertical center-align active page">
+    <div class="vertical center-align page active bottom">
       {@render children()}
     </div>
   {/key}
