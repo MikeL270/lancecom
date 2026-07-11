@@ -62,7 +62,7 @@
   Work History
 </h2>
 <article class="surface-container-lowest center-align responsive border">
-  <div class="medium-height scroll">
+  <div class="medium-height">
     <table class="center-align border stripes surface-container">
       <thead class="surface-container-lowest square fixed">
         <tr>

@@ -102,16 +102,16 @@
   {/if}
 </header>
 <main
-  class="responsive scroll max large-margin"
+  class="responsive scroll max small-padding horizontal-margin center-align"
   class:middle-align={desktopNav.current}
 >
   {#key $page.url.pathname}
-    <div class="vertical center-align active page bottom">
+    <div class="vertical center-align active page">
       {@render children()}
     </div>
   {/key}
 </main>
-<footer class="row center-align fixed">
+<footer class="row center-align no-margin">
   <span>&copy; {date} Michael Lance All rights reserved</span>
   <a
     target="_blank"
@@ -130,7 +130,7 @@
 </footer>
 <button
   class="circle extra primary elevation"
-  style="position: fixed; bottom: 2rem; right: 2rem; z-index: 99999;"
+  style="position: fixed; bottom: 1.2rem; right: 1.2rem; z-index: 999;"
   onclick={toggleTheme}
 >
   {#if isDark}
