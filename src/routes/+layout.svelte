@@ -34,6 +34,24 @@
   ];
 
   let date = $state(new Date().getFullYear());
+
+  let isDark = $state(true);
+
+  $effect(() => {
+    isDark = document.body.classList.contains("dark");
+  });
+
+  const toggleTheme = () => {
+    isDark = !isDark;
+
+    if (isDark) {
+      document.body.classList.add("dark");
+      document.body.classList.remove("light");
+    } else {
+      document.body.classList.add("light");
+      document.body.classList.remove("dark");
+    }
+  };
 </script>
 
 <svelte:head>
@@ -54,8 +72,8 @@
     <h1 class="nosifier-regular">Michael B. Lance</h1>
   {/if}
   {#if desktopNav.current}
-    <div class="absolute right right-margin padding">
-      <nav class="tabbed background middle-align">
+    <div class="absolute right padding">
+      <nav class="tabbed background middle-align no-round">
         {#each routes as route}
           <a
             href={route.location}
@@ -83,18 +101,18 @@
     </nav>
   {/if}
 </header>
-<main class="responsive" class:middle-align={desktopNav.current}>
+<main
+  class="responsive scroll max small-padding horizontal-margin center-align"
+  class:middle-align={desktopNav.current}
+>
   {#key $page.url.pathname}
-    <div
-      class="page bottom vertical center-align active"
-      class:scroll={!desktopNav.current}
-    >
+    <div class="vertical center-align active page">
       {@render children()}
     </div>
   {/key}
 </main>
-<footer class="row center-align">
-  <span>© {date} All rights reserved</span>
+<footer class="row center-align no-margin">
+  <span>&copy; {date} Michael Lance All rights reserved</span>
   <a
     target="_blank"
     rel="noopener noreferrer"
@@ -110,3 +128,14 @@
     <Icon icon="logos:signal" width="1.5rem" />
   </a>
 </footer>
+<button
+  class="circle extra primary elevation"
+  style="position: fixed; bottom: 1.2rem; right: 1.2rem; z-index: 999;"
+  onclick={toggleTheme}
+>
+  {#if isDark}
+    <Icon icon="material-symbols:light-mode-rounded" width="0.5rem" />
+  {:else}
+    <Icon icon="material-symbols:dark-mode-rounded" width="0.5rem" />
+  {/if}
+</button>
