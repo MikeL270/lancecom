@@ -1,13 +1,11 @@
-// See https://svelte.dev/docs/kit/types#app.d.ts
-// for information about these interfaces
+import type { HTMLAttributes } from 'svelte/elements';
+
 declare global {
-	namespace App {
-		// interface Error {}
-		// interface Locals {}
-		// interface PageData {}
-		// interface PageState {}
-		// interface Platform {}
-	}
+  namespace svelteHTML {
+    interface IntrinsicElements {
+      'shield-font': HTMLAttributes<HTMLElement>;
+    }
+  }
 }
 
 export {};

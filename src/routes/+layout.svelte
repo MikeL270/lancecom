@@ -27,9 +27,9 @@
       icon: "ant-design:project-filled",
     },
     {
-      location: "/skills",
-      name: "Skills",
-      icon: "carbon:skill-level-advanced",
+      location: "/bio",
+      name: "Bio",
+      icon: "material-symbols:person",
     },
   ];
 

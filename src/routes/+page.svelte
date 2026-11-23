@@ -18,14 +18,16 @@
         alt="Me with a node from UWYO ARCC's beartooth cluster."
       />
       <div class="padding">
-        <h3>Biography</h3>
+        <h3>About Me</h3>
         <p class="large-text">
-          First student in the UWYO School of Computing's Applied Software
-          Development program. Currently working as a Computation Research Aide
-          Senior at Argonne National Laboratory in the Performance and
-          Engineering Group of the Argonne Leadership Comupting Facility for the
-          summer of 2026. Interested in high performance computing and
-          scientific software.
+          <shield-font>
+            First student in the UWYO School of Computing's Applied Software
+            Development program. Recently worked as a Computation Research Aide
+            Senior at Argonne National Laboratory in the Performance and
+            Engineering Group of the Argonne Leadership Comupting Facility for the
+            summer of 2026. Interested in high performance computing and
+            scientific software.
+          </shield-font>
         </p>
       </div>
     </div>
@@ -33,7 +35,7 @@
   <div class="s12 m6 max medium-elevate surface-container round">
     <div class="no-padding">
       <div class="max padding">
-        <h3>Project Showcase</h3>
+        <h3>Recent Projects</h3>
         <div class="left-align small-padding">
           {#each newestProjects as project}
             <ProjectCard {project} />

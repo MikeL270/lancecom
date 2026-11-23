@@ -1,15 +1,18 @@
 <script lang="ts">
+  import Icon from "@iconify/svelte";
   import { portfolioState } from "./state.svelte";
   import ProjectCard from "../../components/ProjectCard.svelte";
-  import { MediaQuery } from "svelte/reactivity";
-  let desktopNav = new MediaQuery(`min-width: 1180px`);
 </script>
 
-<h2 class="small-padding center-align bottom-shadow responsive border">
-  Project Portfolio
-</h2>
-<div class:grid={desktopNav.current}>
+<div class="field label prefix underline">
+  <Icon icon="material-symbols:search" />
+  <input type="text" id="search" />
+  <label for="search">Search</label>
+</div>
+<div class="grid">
   {#each portfolioState.projects as project}
-    <ProjectCard {project} open={false} />
+    <div class="s8 m16 l6">
+      <ProjectCard {project} open={false} />
+    </div>
   {/each}
 </div>
